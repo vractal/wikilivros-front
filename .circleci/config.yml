@@ -3,7 +3,7 @@ jobs:
   test:
     working_directory: ~/mern-starter
     docker:
-      - image: circleci/node:8.9
+      - image: circleci/node:8.10
     steps:
       - checkout
       - restore_cache:
@@ -53,7 +53,7 @@ workflows:
           filters:
             tags:
               ignore: /.*/
-  
+
       - deploy_production:
           context: org-global
           filters:
