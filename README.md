@@ -50,10 +50,6 @@ $ yarn lint
 
 ## Deployment
 
-#### Staging
-
-Merging to the `master` branch will  automatically deploy to Netlify.
-
 #### Production
 
-To be added
+Merging to `master` branch will  automatically deploy to Netlify.
