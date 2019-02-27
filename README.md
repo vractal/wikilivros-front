@@ -12,8 +12,8 @@ Node v8.10.0
 
 #### Clone the repository
 ```
-$ git clone git@github.com:SeasonedSoftware/paynow-admin.git
-$ cd paynow-admin
+$ git clone git@github.com:SeasonedSoftware/new-react-app.git
+$ cd new-react-app
 ```
 
 #### Install dependencies
