@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 import { Provider as CroodsProvider } from 'croods'
 import { MuiThemeProvider } from '@material-ui/core/styles'
-import './App.css'
-import theme from './theme'
+import store from 'store/store'
 
-import store from './store/store'
+import theme from './theme'
+import './App.css'
 
 export default class extends Component {
   render() {
