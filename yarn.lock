@@ -2144,7 +2144,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.5, classnames@^2.2.6:
+classnames@^2.2.5:
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
 
@@ -8188,6 +8188,12 @@ schema-utils@^1.0.0:
 seasoned-components@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/seasoned-components/-/seasoned-components-0.1.0.tgz#60263de3145fb162fda60bed220a2527a8ad8816"
+
+seasoned-flash@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/seasoned-flash/-/seasoned-flash-0.0.2.tgz#bab3b64d796ed359b7024794e90f82d15be9e095"
+  dependencies:
+    seasoned-components "^0.1.0"
 
 select-hose@^2.0.0:
   version "2.0.0"

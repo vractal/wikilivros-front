@@ -2,7 +2,7 @@ import React from 'react'
 import { Router } from '@reach/router'
 import { CroodsProvider } from 'croods-light'
 import { MuiThemeProvider } from '@material-ui/core/styles'
-import FlashMessage from 'components/FlashMessage'
+import FlashMessage from 'seasoned-flash'
 
 import isDev from 'utils/isDev'
 

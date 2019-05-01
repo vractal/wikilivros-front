@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button'
 import { useSignOut, useDeleteAccount } from 'croods-light-auth'
 
 import CircularProgress from '@material-ui/core/CircularProgress'
-import useFlash from 'hooks/useFlash'
+import { useFlash } from 'seasoned-flash'
 
 export default ({ currentUser }) => {
   const { info } = useFlash()

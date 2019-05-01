@@ -5,7 +5,7 @@ import { Link, navigate } from '@reach/router'
 import FormError from 'components/FormError'
 import Input from 'components/Input'
 import SubmitButton from 'components/SubmitButton'
-import useFlash from 'hooks/useFlash'
+import { useFlash } from 'seasoned-flash'
 
 export default () => {
   const { success } = useFlash()

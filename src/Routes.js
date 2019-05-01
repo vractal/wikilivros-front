@@ -3,7 +3,7 @@ import { navigate } from '@reach/router'
 import { withStyles } from '@material-ui/core/styles'
 import { Auth } from 'croods-light-auth'
 import Card from '@material-ui/core/Card'
-import useFlash from 'hooks/useFlash'
+import { useFlash } from 'seasoned-flash'
 
 const styles = {
   app: {
