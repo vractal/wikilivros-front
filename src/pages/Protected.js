@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button'
 import { useSignOut, useDeleteAccount } from 'croods-light-auth'
 
 import CircularProgress from '@material-ui/core/CircularProgress'
+import PageTitle from 'components/PageTitle'
 import { useFlash } from 'seasoned-flash'
 
 export default ({ currentUser }) => {
@@ -19,6 +20,7 @@ export default ({ currentUser }) => {
 
   return (
     <>
+      <PageTitle>Protected Page</PageTitle>
       <h1>Logged in as {currentUser.email}</h1>
       {loading ? (
         <CircularProgress />
