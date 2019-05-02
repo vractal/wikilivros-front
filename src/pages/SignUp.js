@@ -3,6 +3,7 @@ import { useSignUp } from 'croods-light-auth'
 import { Link, navigate } from '@reach/router'
 
 import FormError from 'components/FormError'
+import PageTitle from 'components/PageTitle'
 import Input from 'components/Input'
 import SubmitButton from 'components/SubmitButton'
 import { useFlash } from 'seasoned-flash'
@@ -25,6 +26,7 @@ export default () => {
 
   return (
     <form {...formProps}>
+      <PageTitle>Sign Up</PageTitle>
       <h2>Sign Up</h2>
       <Input {...fields.text('name')} label="Full name" />
       <Input
