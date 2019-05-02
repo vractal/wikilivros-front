@@ -1,10 +1,5 @@
 import React from 'react'
 import { Router } from '@reach/router'
-import { CroodsProvider } from 'croods-light'
-import { MuiThemeProvider } from '@material-ui/core/styles'
-import FlashMessage from 'seasoned-flash'
-
-import isDev from 'utils/isDev'
 
 import Index from 'pages/Index'
 import Protected from 'pages/Protected'
@@ -14,29 +9,20 @@ import ForgotPassword from 'pages/ForgotPassword'
 import ForgotSent from 'pages/ForgotSent'
 import ResetPassword from 'pages/ResetPassword'
 
-import { Route, AuthRoute } from './Routes'
-import theme from './theme'
+import Providers from './Providers'
+import AuthRoute from './AuthRoute'
 import './App.css'
 
 export default () => (
-  <CroodsProvider
-    debugRequest={isDev}
-    debugActions={isDev}
-    persistHeaders
-    baseUrl={process.env.REACT_APP_API_URL}
-  >
-    <MuiThemeProvider theme={theme}>
-      <FlashMessage>
-        <Router>
-          <Route Component={Index} path="/" />
-          <AuthRoute Component={Protected} path="/protected" />
-          <Route Component={SignIn} path="/sign-in" />
-          <Route Component={SignUp} path="/sign-up" />
-          <Route Component={ForgotSent} path="/forgot-sent" />
-          <Route Component={ForgotPassword} path="/forgot-password" />
-          <Route Component={ResetPassword} path="/reset-password" />
-        </Router>
-      </FlashMessage>
-    </MuiThemeProvider>
-  </CroodsProvider>
+  <Providers>
+    <Router>
+      <Index path="/" />
+      <AuthRoute Component={Protected} path="/protected" />
+      <SignIn path="/sign-in" />
+      <SignUp path="/sign-up" />
+      <ForgotSent path="/forgot-sent" />
+      <ForgotPassword path="/forgot-password" />
+      <ResetPassword path="/reset-password" />
+    </Router>
+  </Providers>
 )
