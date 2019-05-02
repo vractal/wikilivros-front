@@ -6,6 +6,8 @@ import React, {
 } from 'react'
 import PropTypes from 'prop-types'
 
+const STATIC_TITLE = document.title
+
 const Context = createContext()
 
 export const TitleProvider = ({ title, children, separator }) => {
@@ -27,6 +29,9 @@ export const usePageTitle = text => {
   const { title, separator = '|' } = useContext(Context) || {}
   useEffect(() => {
     document.title = title ? [text, title].join(` ${separator} `) : text
+    return () => {
+      document.title = title || STATIC_TITLE
+    }
   }, [text, separator, title])
 }
 
