@@ -1,18 +1,21 @@
 import React from 'react'
 import { useSignUp } from 'croods-light-auth'
-import { Link, navigate } from '@reach/router'
+import { Link } from '@reach/router'
 
 import FormError from 'components/FormError'
 import PageTitle from 'components/PageTitle'
 import Input from 'components/Input'
 import SubmitButton from 'components/SubmitButton'
+import { forwardParams } from 'utils/helpers'
+import { useRedirectBack } from 'utils/hooks'
 import { useFlash } from 'seasoned-flash'
 
 export default () => {
   const { success } = useFlash()
+  const redirectBack = useRedirectBack()
   const [{ signingUp, error, ...options }] = useSignUp({
     afterSuccess: () => {
-      navigate('/')
+      redirectBack()
       success('Successfully signed up')
     },
   })
@@ -37,7 +40,7 @@ export default () => {
       <Input {...passwordProps} />
       <Input {...passwordConfirmationProps} />
       <p>
-        <Link to="/sign-in">Already have an account?</Link>
+        <Link to={forwardParams('/sign-in')}>Already have an account?</Link>
       </p>
       <FormError>{error}</FormError>
       <SubmitButton loading={signingUp}>Sign Up</SubmitButton>

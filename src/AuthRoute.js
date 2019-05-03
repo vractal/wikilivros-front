@@ -9,7 +9,7 @@ export default ({ Component, ...props }) => {
     <Auth
       {...props}
       unauthorized={() => {
-        navigate('/sign-in')
+        navigate(`/sign-in?redirect_to=${props.location.pathname}`)
         error('You are not authorized to access that page')
       }}
       Component={Component}
