@@ -16,9 +16,29 @@ const replaceInFile = async options => {
   }
 }
 
+const defaultProj = 'seasoned-project'
+const defaultName = 'Seasoned Project'
+const defaultAPI = 'https://brazil-lab-staging.herokuapp.com/'
+
 const start = async () => {
-  const name = await rl.questionAsync('What is your website title? ')
-  const api = await rl.questionAsync('What is your API URL? ')
+  const project = (await rl.questionAsync(`What is app name (kebab case, eg: ${defaultProj})? `)) || defaultProj
+  const name = (await rl.questionAsync(`What is your website title (${defaultName})? `)) || defaultName
+  const api = await rl.questionAsync(`What is your API URL (${defaultAPI})? `) || defaultAPI
+  await replaceInFile({
+    files: './package.json',
+    from: /\"name\": \"new-react-app\"/g,
+    to: `"name": "${project}"`,
+  })
+  await replaceInFile({
+    files: './README.md',
+    from: /new-react-app/g,
+    to: project,
+  })
+  await replaceInFile({
+    files: './README.md',
+    from: /(?<=\-\-)((.|\n)*)(?=\-\-\-)/gim,
+    to: '',
+  })
   await replaceInFile({
     files: './public/index.html',
     from: /__SITE__TITLE__/g,

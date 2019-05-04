@@ -42,6 +42,8 @@ $ yarn start
 
 Your browser should automatically open at: `localhost:3000`.
 
+---
+
 ### Checklist
 
 - [ ] Change the image on `./public/favicon.png`.
@@ -56,6 +58,8 @@ Your browser should automatically open at: `localhost:3000`.
 - There are some built in components (`./src/components/*`), helpers (`./src/utils/helpers.js`) and hooks (`./src/utils/hooks.js`). Make sure you get to know them before you start rewriting them.
 - If you want to enable/disable custom lint rules, edit the `.eslintrc.js` file.
 - Don't forget to edit this `README.md` for your own needs.
+
+---
 
 ## Tests
 
