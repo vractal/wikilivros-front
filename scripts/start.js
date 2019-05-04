@@ -58,7 +58,6 @@ const start = async () => {
   })
   console.log(`
 Don't forget to do the following:
-- [ ] Open .env.local and change the REACT_APP_API_URL variable to your real API url.
 - [ ] Change the image on ./public/favicon.png.
 - [ ] Start editing the content on the pages under ./src/pages/, and creating new ones by adding new routes on ./src/App.js
 - [ ] Edit ./src/core/AuthRoute.js if you want to change the way you handle protected routes.
