@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useCallback } from 'react'
 import PropTypes from 'prop-types'
 import useGlobal from 'store'
 
@@ -6,9 +6,10 @@ const STATIC_TITLE = document.title
 
 export const useSiteTitle = (title, separator) => {
   const [, { setTitle }] = useGlobal()
+  const setPageTitle = useCallback(setTitle, [setTitle])
   useEffect(() => {
-    setTitle(title, separator)
-  }, [separator, setTitle, title])
+    setPageTitle(title, separator)
+  }, [separator, setPageTitle, title])
 }
 
 export const usePageTitle = text => {
