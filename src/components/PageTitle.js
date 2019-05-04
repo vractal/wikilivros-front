@@ -5,7 +5,7 @@ import useGlobal from 'store'
 const STATIC_TITLE = document.title
 
 export const useSiteTitle = (title, separator) => {
-  const [, { setTitle }] = useGlobal()
+  const [, { setTitle }] = useGlobal('page@title')
   const setPageTitle = useCallback(setTitle, [setTitle])
   useEffect(() => {
     setPageTitle(title, separator)
@@ -13,7 +13,7 @@ export const useSiteTitle = (title, separator) => {
 }
 
 export const usePageTitle = text => {
-  const [{ siteTitle }] = useGlobal()
+  const [{ siteTitle }] = useGlobal('page@title')
   const { title, separator } = siteTitle || {}
   useEffect(() => {
     document.title = title ? [text, title].join(` ${separator} `) : text
