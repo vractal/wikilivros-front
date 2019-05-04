@@ -9,13 +9,12 @@ import ForgotPassword from 'pages/ForgotPassword'
 import ForgotSent from 'pages/ForgotSent'
 import ResetPassword from 'pages/ResetPassword'
 import { useSiteTitle } from 'components/PageTitle'
-
 import Providers from './Providers'
 import AuthRoute from './AuthRoute'
 import './App.css'
 
 export default () => {
-  useSiteTitle('Seasoned Software')
+  useSiteTitle('Seasoned Website')
   return (
     <Providers>
       <Router>
