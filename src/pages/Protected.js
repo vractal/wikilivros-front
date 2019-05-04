@@ -1,11 +1,12 @@
 import React from 'react'
 import { navigate } from '@reach/router'
-import Button from '@material-ui/core/Button'
 import { useSignOut, useDeleteAccount } from 'croods-light-auth'
-
-import CircularProgress from '@material-ui/core/CircularProgress'
-import PageTitle from 'components/PageTitle'
 import { useFlash } from 'seasoned-flash'
+
+import Button from '@material-ui/core/Button'
+import CircularProgress from '@material-ui/core/CircularProgress'
+
+import PageTitle from 'core/PageTitle'
 
 export default ({ currentUser }) => {
   const { info } = useFlash()

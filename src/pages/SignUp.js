@@ -1,14 +1,14 @@
 import React from 'react'
-import { useSignUp } from 'croods-light-auth'
 import { Link } from '@reach/router'
+import { useSignUp } from 'croods-light-auth'
+import { useFlash } from 'seasoned-flash'
 
+import PageTitle from 'core/PageTitle'
 import FormError from 'components/FormError'
-import PageTitle from 'components/PageTitle'
 import Input from 'components/Input'
 import SubmitButton from 'components/SubmitButton'
 import { forwardParams } from 'utils/helpers'
 import { useRedirectBack } from 'utils/hooks'
-import { useFlash } from 'seasoned-flash'
 
 export default () => {
   const { success } = useFlash()

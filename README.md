@@ -2,20 +2,29 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f22f98eb-5d9c-4e6b-95a7-93cd2495f113/deploy-status)](https://app.netlify.com/sites/seasoned-react-app/deploys)
 
-## Installation
+☝ Change this badge by editing `README.md` after cloning this repo
+
+## Setup
 
 #### Dependencies
 
-Node v8.10.0
+- Node v8.10.0
+- [yarn](https://yarnpkg.com/pt-BR/)
 
-[yarn](https://yarnpkg.com/pt-BR/)
-
-#### Clone the repository
+#### Clone this repository
 
 ```
 $ git clone git@github.com:SeasonedSoftware/new-react-app.git
 $ cd new-react-app
 ```
+
+#### Set the backend API URL
+
+```
+$ cp .env.sample .env.local
+```
+
+- [ ] And change the `REACT_APP_API_URL` variable to your real API url.
 
 #### Install dependencies
 
@@ -29,7 +38,22 @@ $ yarn
 $ yarn start
 ```
 
-You can check that it worked by browsing `localhost:3000`.
+Your browser should automatically open at: `localhost:3000`.
+
+### Checklist
+
+- [ ] Go to `./public/index.html` and change the `<title>` attribute.
+- [ ] Change the image on `./public/favicon.png`.
+- [ ] Start editing the content on the pages under `./src/pages/`, and creating new ones by adding new routes on `./src/App.js`
+- [ ] Edit `./src/core/AuthRoute.js` if you want to change the way you handle protected routes.
+- [ ] Add your global styles to `./src/index.css`. For styling your pages and components, use either `withStyles` from MaterialUI or emotion-css.
+
+### All DONE!
+
+- If you want to add context providers for your whole app, edit the `./src/core/Providers.js` file.
+- There are some built in components (`./src/components/*`), helpers (`./src/utils/helpers.js`) and hooks (`./src/utils/hooks.js`). Make sure you get to know them before you start rewriting them.
+- If you want to enable/disable custom lint rules, edit the `.eslintrc.js` file.
+- Don't forget to edit this `README.md` for your own needs.
 
 ## Tests
 
@@ -54,6 +78,8 @@ $ yarn lint
 ```
 
 ## Deployment
+
+Create a new Website on Netlify from this project's repo (master branch) with default configuration.
 
 #### Production
 

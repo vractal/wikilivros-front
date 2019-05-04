@@ -2,8 +2,8 @@ import React from 'react'
 import { navigate, Link } from '@reach/router'
 import { useForgotPassword } from 'croods-light-auth'
 
+import PageTitle from 'core/PageTitle'
 import FormError from 'components/FormError'
-import PageTitle from 'components/PageTitle'
 import Input from 'components/Input'
 import SubmitButton from 'components/SubmitButton'
 

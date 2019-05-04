@@ -1,15 +1,19 @@
 import { useEffect, useCallback } from 'react'
-import PropTypes from 'prop-types'
-
-import useGlobal from 'store'
+import { useStore } from 'croods-light'
 
 const STATIC_TITLE = document.title
+
+const useGlobal = useStore({
+  setTitle: (store, title, separator = '|') =>
+    store.setState({ siteTitle: { title, separator } }, 'page@title'),
+})
+
 // It will set a base Title for the site. When used along with usePageTitle
 // It'll take place after the separator in the title. For instance:
 // USAGE: useSiteTitle('Seasoned Site') will result in 'Seasoned Site'
 // later, when you use: usePageTitle('Home')
 // the result will be 'Home | Seasoned Site'
-export const useSiteTitle = (title, separator) => {
+export const useSiteTitle = (title = STATIC_TITLE, separator = '|') => {
   const [, { setTitle }] = useGlobal('page@title')
   const setPageTitle = useCallback(setTitle, [setTitle])
   useEffect(() => {
@@ -27,14 +31,3 @@ export const usePageTitle = text => {
     }
   }, [text, separator, title])
 }
-
-const PageTitle = ({ children }) => {
-  usePageTitle(`${children}`)
-  return null
-}
-
-PageTitle.propTypes = {
-  children: PropTypes.string.isRequired,
-}
-
-export default PageTitle

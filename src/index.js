@@ -1,6 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
+import Providers from 'core/Providers'
 import App from './App'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+import './index.css'
+
+ReactDOM.render(
+  <Providers>
+    <App />
+  </Providers>,
+  document.getElementById('root'),
+)
