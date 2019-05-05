@@ -1,4 +1,4 @@
-## New react app
+## New_React_App
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f22f98eb-5d9c-4e6b-95a7-93cd2495f113/deploy-status)](https://app.netlify.com/sites/seasoned-react-app/deploys)
 
@@ -14,7 +14,7 @@
 #### Clone this repository
 
 ```
-$ git clone git@github.com:SeasonedSoftware/new-react-app.git
+$ git clone git@github.com:SeasonedSoftware/new-react-app.git $$project-name$$
 $ cd new-react-app
 ```
 
@@ -42,14 +42,15 @@ $ yarn start
 
 Your browser should automatically open at: `localhost:3000`.
 
----
-
 ### Checklist
 
 - [ ] Change the image on `./public/favicon.png`.
 - [ ] Start editing the content on the pages under `./src/pages/`, and creating new ones by adding new routes on `./src/App.js`
 - [ ] Edit `./src/core/AuthRoute.js` if you want to change the way you handle protected routes.
 - [ ] Add your global styles to `./src/index.css`. For styling your pages and components, use either `withStyles` from MaterialUI or emotion-css.
+- [ ] Change this README and update the Badges.
+
+---
 
 ### All DONE!
 
@@ -57,7 +58,6 @@ Your browser should automatically open at: `localhost:3000`.
 - If you want to add context providers for your whole app, edit the `./src/core/Providers.js` file.
 - There are some built in components (`./src/components/*`), helpers (`./src/utils/helpers.js`) and hooks (`./src/utils/hooks.js`). Make sure you get to know them before you start rewriting them.
 - If you want to enable/disable custom lint rules, edit the `.eslintrc.js` file.
-- Don't forget to edit this `README.md` for your own needs.
 
 ---
 

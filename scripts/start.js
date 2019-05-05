@@ -1,6 +1,7 @@
 const readline = require('readline-promise').default
 const replace = require('replace-in-file')
 const fs = require('fs')
+const path = require('path')
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -16,12 +17,12 @@ const replaceInFile = async options => {
   }
 }
 
-const defaultProj = 'seasoned-project'
 const defaultName = 'Seasoned Project'
 const defaultAPI = 'https://brazil-lab-staging.herokuapp.com/'
+const defaultProj = path.dirname(__dirname, '..').split(path.sep).pop()
 
 const start = async () => {
-  const project = (await rl.questionAsync(`What is app name (kebab case, eg: ${defaultProj})? `)) || defaultProj
+  const project = (await rl.questionAsync(`What is app name in kebab case (${defaultProj})? `)) || defaultProj
   const name = (await rl.questionAsync(`What is your website title (${defaultName})? `)) || defaultName
   const api = await rl.questionAsync(`What is your API URL (${defaultAPI})? `) || defaultAPI
   await replaceInFile({
@@ -36,7 +37,17 @@ const start = async () => {
   })
   await replaceInFile({
     files: './README.md',
+    from: /New_React_App/g,
+    to: name,
+  })
+  await replaceInFile({
+    files: './README.md',
     from: /(?<=\-\-)((.|\n)*)(?=\-\-\-)/gim,
+    to: '',
+  })
+  await replaceInFile({
+    files: './README.md',
+    from: /\W(\$){2}((.|\n)*)(\$){2}/g,
     to: '',
   })
   await replaceInFile({
@@ -57,12 +68,7 @@ const start = async () => {
     to: api,
   })
   console.log(`
-Don't forget to do the following:
-- [ ] Change the image on ./public/favicon.png.
-- [ ] Start editing the content on the pages under ./src/pages/, and creating new ones by adding new routes on ./src/App.js
-- [ ] Edit ./src/core/AuthRoute.js if you want to change the way you handle protected routes.
-- [ ] Add your global styles to ./src/index.css. For styling your pages and components, use either "withStyles" from MaterialUI or "emotion-css".
-
+Don't forget to do the tasks on the README checklist!
 
 All good! Happy dev 🤓
   `)
