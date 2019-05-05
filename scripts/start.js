@@ -2,6 +2,7 @@ const readline = require('readline-promise').default
 const replace = require('replace-in-file')
 const fs = require('fs')
 const path = require('path')
+const startCase = require('lodash/startCase')
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -17,12 +18,12 @@ const replaceInFile = async options => {
   }
 }
 
-const defaultName = 'Seasoned Project'
 const defaultAPI = 'https://brazil-lab-staging.herokuapp.com/'
 const defaultProj = path.dirname(__dirname, '..').split(path.sep).pop()
 
 const start = async () => {
   const project = (await rl.questionAsync(`What is your app name in kebab case (${defaultProj})? `)) || defaultProj
+  const defaultName = startCase(project)
   const name = (await rl.questionAsync(`What is your website title (${defaultName})? `)) || defaultName
   const api = await rl.questionAsync(`What is your API URL (${defaultAPI})? `) || defaultAPI
   await replaceInFile({
