@@ -8,7 +8,7 @@
 
 #### Dependencies
 
-- Node v8.10.0
+- Node v11.1.0
 - [yarn](https://yarnpkg.com/pt-BR/)
 
 #### Clone this repository
