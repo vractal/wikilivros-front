@@ -68,7 +68,7 @@ const start = async () => {
     to: api,
   })
   console.log(`
-Don't forget to do the tasks on the README checklist!
+Don't forget to CHANGE YOUR FAVICON and do the tasks on the README checklist!
 
 All good! Happy dev 🤓
   `)
