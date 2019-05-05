@@ -39,7 +39,14 @@ const start = async () => {
   await replaceInFile({
     files: './README.md',
     from: /(?<=\-\-)((.|\n)*)(?=\-\-\-)/gim,
-    to: '',
+    to: checklist,
+  })
+  await replaceInFile({
+    files: './README.md',
+    from: /(\[\!)((.|\n)*)(?=\#\# Setup)/gim,
+    to: `
+<Add Netlify and other badges here>
+`,
   })
   await replaceInFile({
     files: './README.md',
@@ -60,5 +67,17 @@ All good! Happy dev 🤓
   `)
   rl.close()
 }
+
+const checklist = `--
+### Checklist
+
+- [ ] Change the image on \`./public/favicon.png\`.
+- [ ] Start editing the content on the pages under \`./src/pages/\`, and creating new ones by adding new routes on \`./src/App.js\`
+- [ ] Edit \`./src/core/AuthRoute.js\` if you want to change the way you handle protected routes.
+- [ ] Add your global styles to \`./src/index.css\`. For styling your pages and components, use either \`withStyles\` from MaterialUI or emotion-css.
+- [ ] Erase this checklist on README and update the Badges.
+
+
+`
 
 start()

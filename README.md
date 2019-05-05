@@ -1,4 +1,4 @@
-## New_React_App
+# New_React_App
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f22f98eb-5d9c-4e6b-95a7-93cd2495f113/deploy-status)](https://app.netlify.com/sites/seasoned-react-app/deploys)
 
@@ -41,14 +41,6 @@ $ yarn start
 ```
 
 Your browser should automatically open at: `localhost:3000`.
-
-### Checklist
-
-- [ ] Change the image on `./public/favicon.png`.
-- [ ] Start editing the content on the pages under `./src/pages/`, and creating new ones by adding new routes on `./src/App.js`
-- [ ] Edit `./src/core/AuthRoute.js` if you want to change the way you handle protected routes.
-- [ ] Add your global styles to `./src/index.css`. For styling your pages and components, use either `withStyles` from MaterialUI or emotion-css.
-- [ ] Change this README and update the Badges.
 
 ---
 
