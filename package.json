@@ -17,7 +17,7 @@
   },
   "scripts": {
     "lint": "node_modules/.bin/eslint --max-warnings 0 .",
-    "scaffold": "node ./scripts/start.js && open ./public",
+    "scaffold": "node ./scripts/scaffold.js && open ./public",
     "start": "NODE_PATH=src/ react-scripts start",
     "build": "NODE_PATH=src/ react-scripts build",
     "test": "NODE_PATH=src/ react-scripts test --env=jsdom --no-cache",
