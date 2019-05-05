@@ -21,7 +21,7 @@ export default ({ currentUser }) => {
 
   return (
     <>
-      <PageTitle>Protected Page</PageTitle>
+      <PageTitle>Logged In</PageTitle>
       <h1>Logged in as {currentUser.email}</h1>
       {loading ? (
         <CircularProgress />

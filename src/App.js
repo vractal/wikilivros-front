@@ -2,13 +2,13 @@ import React from 'react'
 import { Router } from '@reach/router'
 
 import Index from 'pages/Index'
-import Protected from 'pages/Protected'
+import Logged from 'pages/Logged'
 import SignIn from 'pages/SignIn'
 import SignUp from 'pages/SignUp'
 import ForgotPassword from 'pages/ForgotPassword'
 import ForgotSent from 'pages/ForgotSent'
 import ResetPassword from 'pages/ResetPassword'
-import AuthRoute from 'core/AuthRoute'
+import ProtectedRoute from 'core/ProtectedRoute'
 import { useSiteTitle } from 'core/hooks'
 
 export default () => {
@@ -16,7 +16,7 @@ export default () => {
   return (
     <Router>
       <Index path="/" />
-      <AuthRoute Component={Protected} path="/protected" />
+      <ProtectedRoute Component={Logged} path="/logged" />
       <SignIn path="/sign-in" />
       <SignUp path="/sign-up" />
       <ForgotSent path="/forgot-sent" />
