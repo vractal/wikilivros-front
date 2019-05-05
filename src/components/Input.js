@@ -14,19 +14,20 @@ export default ({
   label = startCase(name),
   placeholder = label,
   ...props
-}) => (
-  <FormControl
-    fullWidth
-    error={!!error}
-    aria-describedby={helper ? `${name}-helper-text` : undefined}
-    disabled={disabled}
-  >
-    <InputLabel htmlFor="name-simple">{label}</InputLabel>
-    <Input {...props} placeholder={placeholder} id={name} />
-    {(helper || error) && (
-      <FormHelperText id={`${name}-helper-text`}>
-        {helper || error}
-      </FormHelperText>
-    )}
-  </FormControl>
-)
+}) => {
+  const helperText = error || helper
+  return (
+    <FormControl
+      fullWidth
+      error={!!error}
+      aria-describedby={helperText ? `${name}-helper-text` : undefined}
+      disabled={disabled}
+    >
+      <InputLabel htmlFor={name}>{label}</InputLabel>
+      <Input {...props} placeholder={placeholder} id={name} />
+      {helperText && (
+        <FormHelperText id={`${name}-helper-text`}>{helperText}</FormHelperText>
+      )}
+    </FormControl>
+  )
+}
