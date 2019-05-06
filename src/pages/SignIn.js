@@ -3,7 +3,6 @@ import { Link } from '@reach/router'
 import { useSignIn } from 'croods-light-auth'
 import { useFlash } from 'seasoned-flash'
 
-import PageTitle from 'core/PageTitle'
 import FormError from 'components/FormError'
 import Input from 'components/Input'
 import SubmitButton from 'components/SubmitButton'
@@ -24,7 +23,6 @@ export default () => {
 
   return (
     <form {...formProps}>
-      <PageTitle>Sign In</PageTitle>
       <h2>Sign In</h2>
       <Input {...emailProps} label="Email address" />
       <Input {...passwordProps} />

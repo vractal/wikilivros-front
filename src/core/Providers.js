@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { CroodsProvider } from 'croods-light'
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import FlashMessage from 'seasoned-flash'
@@ -6,7 +7,7 @@ import FlashMessage from 'seasoned-flash'
 import { isDev } from 'utils/helpers'
 import theme from '../theme'
 
-export default ({ children }) => (
+const Providers = ({ children }) => (
   <CroodsProvider
     debugRequest={isDev}
     debugActions={isDev}
@@ -18,3 +19,9 @@ export default ({ children }) => (
     </MuiThemeProvider>
   </CroodsProvider>
 )
+
+Providers.propTypes = {
+  children: PropTypes.element.isRequired,
+}
+
+export default Providers

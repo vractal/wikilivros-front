@@ -6,8 +6,6 @@ import { useFlash } from 'seasoned-flash'
 import Button from '@material-ui/core/Button'
 import CircularProgress from '@material-ui/core/CircularProgress'
 
-import PageTitle from 'core/PageTitle'
-
 export default ({ currentUser }) => {
   const { info } = useFlash()
   const [{ signingOut }, signOut] = useSignOut()
@@ -21,7 +19,6 @@ export default ({ currentUser }) => {
 
   return (
     <>
-      <PageTitle>Logged In</PageTitle>
       <h1>Logged in as {currentUser.email}</h1>
       {loading ? (
         <CircularProgress />

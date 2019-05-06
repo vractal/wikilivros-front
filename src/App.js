@@ -8,20 +8,20 @@ import SignUp from 'pages/SignUp'
 import ForgotPassword from 'pages/ForgotPassword'
 import ForgotSent from 'pages/ForgotSent'
 import ResetPassword from 'pages/ResetPassword'
-import ProtectedRoute from 'core/ProtectedRoute'
+import Route from 'core/Route'
 import { useSiteTitle } from 'core/hooks'
 
 export default () => {
   useSiteTitle()
   return (
     <Router>
-      <Index path="/" />
-      <ProtectedRoute Component={Logged} path="/logged" />
-      <SignIn path="/sign-in" />
-      <SignUp path="/sign-up" />
-      <ForgotSent path="/forgot-sent" />
-      <ForgotPassword path="/forgot-password" />
-      <ResetPassword path="/reset-password" />
+      <Route Component={Index} path="/" title="Home" />
+      <Route Component={Logged} path="/logged" title="Account" protect />
+      <Route Component={SignIn} path="/sign-in" title="Sign In" />
+      <Route Component={SignUp} path="/sign-up" title="Sign Up" />
+      <Route Component={ForgotSent} path="/forgot-sent" />
+      <Route Component={ForgotPassword} path="/forgot-password" />
+      <Route Component={ResetPassword} path="/reset-password" />
     </Router>
   )
 }

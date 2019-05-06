@@ -2,7 +2,6 @@ import React from 'react'
 import { navigate, Link } from '@reach/router'
 import { useForgotPassword } from 'croods-light-auth'
 
-import PageTitle from 'core/PageTitle'
 import FormError from 'components/FormError'
 import Input from 'components/Input'
 import SubmitButton from 'components/SubmitButton'
@@ -15,7 +14,6 @@ export default () => {
 
   return (
     <form {...formProps}>
-      <PageTitle>Forgot password</PageTitle>
       <h2>Forgot your password?</h2>
       <Input {...emailProps} />
       <p>
