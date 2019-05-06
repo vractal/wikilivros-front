@@ -5,7 +5,7 @@ import { useFlash } from 'seasoned-flash'
 import { Auth } from 'croods-light-auth'
 import PageTitle from 'core/PageTitle'
 
-const Route = ({
+export const Route = ({
   Component,
   title,
   authorize,
@@ -48,4 +48,4 @@ Route.propTypes = {
   title: PropTypes.string,
 }
 
-export default Route
+export const Root = ({ children }) => children

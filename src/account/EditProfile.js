@@ -26,9 +26,9 @@ export default ({ currentUser }) => {
       <Input {...fields.text('name')} label="Full name" />
       <Input {...fields.email('email')} label="Email" />
       <FormError>{error}</FormError>
-      <p>
+      <div style={{ marginTop: '1rem' }}>
         <SubmitButton loading={saving}>Save</SubmitButton>
-      </p>
+      </div>
     </form>
   )
 }

@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button'
 
 const email = 'blocked@gmail.com'
 
-export default ({ setCurrentUser }) => (
+const Blocked = ({ setCurrentUser }) => (
   <>
     <h1>This page should block this user: {email}</h1>
     <div>
@@ -19,3 +19,13 @@ export default ({ setCurrentUser }) => (
     </div>
   </>
 )
+
+Blocked.config = {
+  Component: Blocked,
+  authorize: true,
+  unauthorize: currentUser => currentUser.email === email,
+  unauthorizeMessage: 'You have been blocked',
+  redirect: '/',
+}
+
+export default Blocked
