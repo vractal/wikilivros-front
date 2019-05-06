@@ -3,6 +3,7 @@ import { Router } from '@reach/router'
 
 import Index from 'pages/Index'
 import Logged from 'pages/Logged'
+import Blocked from 'pages/Blocked'
 import SignIn from 'pages/SignIn'
 import SignUp from 'pages/SignUp'
 import ForgotPassword from 'pages/ForgotPassword'
@@ -22,6 +23,14 @@ export default () => {
       <Route Component={ForgotSent} path="/forgot-sent" />
       <Route Component={ForgotPassword} path="/forgot-password" />
       <Route Component={ResetPassword} path="/reset-password" />
+      <Route
+        Component={Blocked}
+        path="/blocked"
+        unauthorize={currentUser => currentUser.email === 'blocked@gmail.com'}
+        redirect="/"
+        unauthorizeMessage="You have been blocked"
+        protect
+      />
     </Router>
   )
 }

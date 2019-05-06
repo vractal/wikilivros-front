@@ -1,5 +1,5 @@
 import React from 'react'
-import { navigate } from '@reach/router'
+import { Link, navigate } from '@reach/router'
 import { useSignOut, useDeleteAccount } from 'croods-light-auth'
 import { useFlash } from 'seasoned-flash'
 
@@ -20,6 +20,9 @@ export default ({ currentUser }) => {
   return (
     <>
       <h1>Logged in as {currentUser.email}</h1>
+      <p>
+        <Link to="/blocked">Go to blocked page</Link>
+      </p>
       {loading ? (
         <CircularProgress />
       ) : (

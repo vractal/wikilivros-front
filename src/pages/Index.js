@@ -4,6 +4,6 @@ import { Link } from '@reach/router'
 export default () => (
   <>
     <h1>New_React_App</h1>
-    <Link to="/logged">Protected page</Link>
+    <Link to="/logged">Account page</Link>
   </>
 )

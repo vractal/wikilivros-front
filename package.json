@@ -7,7 +7,7 @@
     "@material-ui/icons": "^3.0.1",
     "@reach/router": "^1.2.1",
     "croods-light": "0.2.0",
-    "croods-light-auth": "^0.0.4",
+    "croods-light-auth": "0.0.5",
     "lodash": "^4.17.11",
     "prop-types": "^15.7.2",
     "react": "^16.8.0",
