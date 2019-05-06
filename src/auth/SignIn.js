@@ -3,9 +3,9 @@ import { Link } from '@reach/router'
 import { useSignIn } from 'croods-light-auth'
 import { useFlash } from 'seasoned-flash'
 
-import FormError from 'components/FormError'
-import Input from 'components/Input'
-import SubmitButton from 'components/SubmitButton'
+import FormError from 'forms/FormError'
+import Input from 'forms/Input'
+import SubmitButton from 'forms/SubmitButton'
 import { useRedirectBack } from 'utils/hooks'
 import { forwardParams } from 'utils/helpers'
 

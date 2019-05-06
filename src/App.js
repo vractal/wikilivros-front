@@ -1,24 +1,24 @@
 import React from 'react'
 import { Router } from '@reach/router'
 
-import Index from 'pages/Index'
-import Logged from 'pages/Logged'
-import Blocked from 'pages/Blocked'
-import SignIn from 'pages/SignIn'
-import SignUp from 'pages/SignUp'
-import EditProfile from 'pages/EditProfile'
-import ForgotPassword from 'pages/ForgotPassword'
-import ForgotSent from 'pages/ForgotSent'
-import ResetPassword from 'pages/ResetPassword'
+import EditProfile from 'account/EditProfile'
+import SignIn from 'auth/SignIn'
+import SignUp from 'auth/SignUp'
+import ForgotPassword from 'auth/ForgotPassword'
+import ForgotSent from 'auth/ForgotSent'
+import ResetPassword from 'auth/ResetPassword'
 import Route from 'core/Route'
 import { useSiteTitle } from 'core/hooks'
+import Blocked from './blocked'
+import Home from './home'
+import Account from './account'
 
 export default () => {
   useSiteTitle()
   return (
     <Router>
-      <Route Component={Index} path="/" title="Home" />
-      <Route Component={Logged} path="/logged" title="Account" authorize />
+      <Route Component={Home} path="/" title="Home" />
+      <Route Component={Account} path="/account" title="Account" authorize />
       <Route Component={SignIn} path="/sign-in" title="Sign In" />
       <Route Component={SignUp} path="/sign-up" title="Sign Up" />
       <Route Component={ForgotSent} path="/forgot-sent" />
