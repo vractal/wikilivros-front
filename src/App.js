@@ -27,7 +27,7 @@ export default () => {
       <Route Component={ForgotSent} path="/forgot-sent" />
       <Route Component={ForgotPassword} path="/forgot-password" />
       <Route Component={ResetPassword} path="/reset-password" />
-      <Route {...Blocked.config} path="/blocked" />
+      <Route {...Blocked.routeConfig} path="/blocked" />
     </Router>
   )
 }

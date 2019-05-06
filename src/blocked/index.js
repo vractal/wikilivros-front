@@ -20,7 +20,7 @@ const Blocked = ({ setCurrentUser }) => (
   </>
 )
 
-Blocked.config = {
+Blocked.routeConfig = {
   Component: Blocked,
   authorize: true,
   unauthorize: currentUser => currentUser.email === email,
