@@ -6,6 +6,7 @@ import Logged from 'pages/Logged'
 import Blocked from 'pages/Blocked'
 import SignIn from 'pages/SignIn'
 import SignUp from 'pages/SignUp'
+import EditProfile from 'pages/EditProfile'
 import ForgotPassword from 'pages/ForgotPassword'
 import ForgotSent from 'pages/ForgotSent'
 import ResetPassword from 'pages/ResetPassword'
@@ -23,6 +24,7 @@ export default () => {
       <Route Component={ForgotSent} path="/forgot-sent" />
       <Route Component={ForgotPassword} path="/forgot-password" />
       <Route Component={ResetPassword} path="/reset-password" />
+      <Route Component={EditProfile} path="/edit-profile" protect />
       <Route
         Component={Blocked}
         path="/blocked"

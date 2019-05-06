@@ -2463,9 +2463,9 @@ create-react-context@^0.2.1:
     fbjs "^0.8.0"
     gud "^1.0.0"
 
-croods-light-auth@0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/croods-light-auth/-/croods-light-auth-0.0.5.tgz#45cf8725453c846f9a3e62cee033a9f6bbafbc53"
+croods-light-auth@0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/croods-light-auth/-/croods-light-auth-0.0.7.tgz#4815ba87f28778665ab3b62188c68adcf7753a51"
   dependencies:
     react-use-form-state "^0.9.1"
 

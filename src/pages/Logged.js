@@ -21,6 +21,9 @@ export default ({ currentUser }) => {
     <>
       <h1>Logged in as {currentUser.email}</h1>
       <p>
+        <Link to="/edit-profile">Edit Profile</Link>
+      </p>
+      <p>
         <Link to="/blocked">Go to blocked page</Link>
       </p>
       {loading ? (

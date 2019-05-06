@@ -18,7 +18,7 @@ const replaceInFile = async options => {
   }
 }
 
-const defaultAPI = 'https://brazil-lab-staging.herokuapp.com/'
+const defaultAPI = 'https://upme-staging.herokuapp.com/'
 const defaultProj = path.dirname(__dirname, '..').split(path.sep).pop()
 
 const start = async () => {
