@@ -2,6 +2,7 @@ import React from 'react'
 import { Router } from '@reach/router'
 
 import { Route, Root } from 'core/Routes'
+import NotFound from 'core/NotFound'
 import SignIn from 'auth/SignIn'
 import SignUp from 'auth/SignUp'
 import ForgotPassword from 'auth/ForgotPassword'
@@ -28,6 +29,7 @@ export default () => {
       <Route Component={ForgotPassword} path="/forgot-password" />
       <Route Component={ResetPassword} path="/reset-password" />
       <Route {...Blocked.routeConfig} path="/blocked" />
+      <Route Component={NotFound} default title="404 - Page not found" />
     </Router>
   )
 }

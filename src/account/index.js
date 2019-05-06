@@ -19,7 +19,7 @@ export default ({ currentUser }) => {
 
   return (
     <>
-      <h1>Logged in as {currentUser.email}</h1>
+      <h1>Logged in as {currentUser.name}</h1>
       <p>
         <Link to="edit-profile">Edit Profile</Link>
       </p>

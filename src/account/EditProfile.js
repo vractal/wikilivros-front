@@ -17,7 +17,7 @@ export default ({ currentUser }) => {
       success('Successfully signed up')
     },
   })
-  const title = `Edit ${formState.values.name || currentUser.name}`
+  const title = `Edit: ${formState.values.name || currentUser.name}`
 
   return (
     <form {...formProps}>

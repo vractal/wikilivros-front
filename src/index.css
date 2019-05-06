@@ -19,4 +19,6 @@ code {
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
+  flex-wrap: wrap;
+  padding: 2rem;
 }
