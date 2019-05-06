@@ -1,8 +1,8 @@
 import React from 'react'
 import { useEditProfile } from 'croods-light-auth'
 import { useFlash } from 'seasoned-flash'
-
 import PageTitle from 'core/PageTitle'
+
 import FormError from 'forms/FormError'
 import Input from 'forms/Input'
 import SubmitButton from 'forms/SubmitButton'
