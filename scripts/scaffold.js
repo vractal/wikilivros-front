@@ -32,7 +32,7 @@ const start = async () => {
     to: project,
   })
   await replaceInFile({
-    files: ['./README.md', './src/pages/Index.js', './public/index.html'],
+    files: ['./README.md', './src/home/index.js', './public/index.html'],
     from: /New_React_App/g,
     to: name,
   })
@@ -72,8 +72,8 @@ const checklist = `--
 ### Checklist
 
 - [ ] Change the image on \`./public/favicon.png\`.
-- [ ] Start editing the content on the pages under \`./src/pages/\`, and creating new ones by adding new routes on \`./src/App.js\`
-- [ ] Edit \`./src/core/AuthRoute.js\` if you want to change the way you handle protected routes.
+- [ ] Start editing the content on the folders under \`./src/\`, and creating new ones by adding new routes on \`./src/App.js\`
+- [ ] Edit \`./src/core/Routes.js\` if you want to change the way you handle protected routes.
 - [ ] Add your global styles to \`./src/index.css\`. For styling your pages and components, use either \`withStyles\` from MaterialUI or emotion-css.
 - [ ] Erase this checklist on README and update the Badges.
 
