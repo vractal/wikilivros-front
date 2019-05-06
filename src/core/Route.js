@@ -8,7 +8,7 @@ import PageTitle from 'core/PageTitle'
 const Route = ({
   Component,
   title,
-  protect,
+  authorize,
   unauthorize,
   unauthorizeMessage,
   redirect,
@@ -22,7 +22,7 @@ const Route = ({
   return (
     <>
       {title && <PageTitle>{title}</PageTitle>}
-      {protect ? (
+      {authorize ? (
         <Auth
           {...props}
           unauthorize={unauthorize}
@@ -44,7 +44,7 @@ Route.propTypes = {
   unauthorize: PropTypes.func,
   redirect: PropTypes.string,
   unauthorizeMessage: PropTypes.string,
-  protect: PropTypes.bool,
+  authorize: PropTypes.bool,
   title: PropTypes.string,
 }
 
