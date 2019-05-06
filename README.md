@@ -40,6 +40,37 @@ It will initiate your website's title and will create the `.env` and `.env.local
 $ yarn start
 ```
 
+## Setup using Docker
+
+#### Clone this repository
+
+```
+$ git clone git@github.com:SeasonedSoftware/new-react-app.git $$your-project-name$$
+$ cd new-react-app
+```
+
+#### Install dependencies
+
+```
+$ docker-compose run front yarn
+```
+
+#### Set up some configs
+
+Run the following command and follow the instructions on terminal:
+
+```
+$ docker-compose run front yarn scaffold
+```
+
+It will initiate your website's title and will create the `.env` and `.env.local` files
+
+#### Run the server
+
+```
+$ docker-compose up
+```
+
 Your browser should automatically open at: `localhost:3000`.
 
 ---
