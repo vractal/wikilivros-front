@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { CroodsProvider } from 'croods-light'
+import { authHeaders } from 'croods-light-auth'
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import FlashMessage from 'seasoned-flash'
 
@@ -11,7 +12,7 @@ const Providers = ({ children }) => (
   <CroodsProvider
     debugRequest={isDev}
     debugActions={isDev}
-    persistHeaders
+    headers={authHeaders}
     baseUrl={process.env.REACT_APP_API_URL}
   >
     <MuiThemeProvider theme={theme}>

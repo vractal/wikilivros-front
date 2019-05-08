@@ -2463,15 +2463,15 @@ create-react-context@^0.2.1:
     fbjs "^0.8.0"
     gud "^1.0.0"
 
-croods-light-auth@0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/croods-light-auth/-/croods-light-auth-0.0.7.tgz#4815ba87f28778665ab3b62188c68adcf7753a51"
+croods-light-auth@0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/croods-light-auth/-/croods-light-auth-0.0.8.tgz#ce4fafa411aa083638e0c5d20e04e37d048b659c"
   dependencies:
     react-use-form-state "^0.9.1"
 
-croods-light@0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/croods-light/-/croods-light-0.2.0.tgz#44e9121b005f2b3a79de3a4f0932881e6165d6cf"
+croods-light@0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/croods-light/-/croods-light-0.4.0.tgz#e60bfc9601a7aa430346ca597d13d6c253d07a3b"
   dependencies:
     axios "^0.18.0"
     lodash "^4.17.11"

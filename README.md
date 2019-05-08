@@ -77,7 +77,7 @@ Your browser should automatically open at: `localhost:3000`.
 
 ### All DONE!
 
-- This project heavly relies on [Croods](https://croods-docz.netlify.com) and [Croods-auth](https://croods-docz.netlify.com) projects. Make sure you read their docs.
+- This project heavly relies on [Croods](https://croods.netlify.com) and [Croods-auth](https://croods.netlify.com/docs/croods-auth) projects. Make sure you read their docs.
 - If you want to add context providers for your whole app, edit the `./src/core/Providers.js` file.
 - There are some built in helpers (`./src/utils/helpers.js`) and hooks (`./src/utils/hooks.js`). Make sure you get to know them before you start rewriting them.
 - If you want to enable/disable custom lint rules, edit the `.eslintrc.js` file.
