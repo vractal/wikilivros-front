@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { CroodsProvider } from 'croods-light'
+import { CroodsProvider } from 'croods'
 import { authHeaders } from 'croods-light-auth'
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import FlashMessage from 'seasoned-flash'

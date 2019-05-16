@@ -1,5 +1,5 @@
 import { useEffect, useCallback } from 'react'
-import { useStore } from 'croods-light'
+import { useStore } from 'croods'
 
 const STATIC_TITLE = document.title
 
