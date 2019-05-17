@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from '@reach/router'
-import { useSignUp } from 'croods-light-auth'
+import { useSignUp } from 'croods-auth'
 import { useFlash } from 'seasoned-flash'
 
 import FormError from 'forms/FormError'

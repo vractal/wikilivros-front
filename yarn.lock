@@ -2476,15 +2476,17 @@ create-react-context@^0.2.1:
     fbjs "^0.8.0"
     gud "^1.0.0"
 
-croods-light-auth@0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/croods-light-auth/-/croods-light-auth-0.3.0.tgz#6fede5536d3dc549b832c8ef41d7c2486f4a6dc9"
+croods-auth@^2.0.0:
+  version "2.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/croods-auth/-/croods-auth-2.0.0-rc.1.tgz#295dc735cc1ba9b1e35eba4a1cd114146bb66854"
+  integrity sha512-bhAO5wfK4dtgrAgsWM1dq/b8CcZ+QzWeDnNSZsSYbTpqV/sEOAdvuUhaxscPOetIXqTrDfBnL+1p1l8sZJggZw==
   dependencies:
     react-use-form-state "^0.9.1"
 
 croods@^1.0.0:
-  version "1.0.0-rc.0"
-  resolved "https://registry.yarnpkg.com/croods/-/croods-1.0.0-rc.0.tgz#964bc13940e9a50f34605ec67b8cd82cf49b504d"
+  version "1.0.0-rc.2"
+  resolved "https://registry.yarnpkg.com/croods/-/croods-1.0.0-rc.2.tgz#982d20627ccf651297f09d5ee814fd8c84ef73e4"
+  integrity sha512-dFB0Ua9IjOk8sXVALzN5XTyK1y1rfrnpdtFw+wGDThN0UU9DNyJyj3F+YRnqcHlYA7p+w9FoWMJg8WlHiI9xVg==
   dependencies:
     axios "^0.18.0"
     lodash "^4.17.11"

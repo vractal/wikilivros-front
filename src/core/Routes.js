@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { navigate } from '@reach/router'
 import { useFlash } from 'seasoned-flash'
-import { Auth } from 'croods-light-auth'
+import { Auth } from 'croods-auth'
 import PageTitle from 'core/PageTitle'
 
 export const Route = ({
