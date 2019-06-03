@@ -13,7 +13,7 @@ const Providers = ({ children }) => (
     debugRequest={isDev}
     debugActions={isDev}
     headers={authHeaders}
-    baseUrl={process.env.REACT_APP_API_URL}
+    baseUrl="https://localhost:3000"
   >
     <MuiThemeProvider theme={theme}>
       <FlashMessage>{children}</FlashMessage>
