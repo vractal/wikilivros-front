@@ -13,7 +13,7 @@ const Providers = ({ children }) => (
     debugRequest={isDev}
     debugActions={isDev}
     headers={authHeaders}
-    baseUrl="https://localhost:3000"
+    baseUrl="http://localhost:3000"
   >
     <MuiThemeProvider theme={theme}>
       <FlashMessage>{children}</FlashMessage>

@@ -17,7 +17,6 @@ export default () => {
       <Header />
       <Paper
         elevation={1}
-        alignItems="center"
         style={{
           display: 'flex',
           flexDirection: 'column',

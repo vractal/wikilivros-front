@@ -37,7 +37,8 @@ export default props => {
               </Grid>
               <Grid
                 item
-                justifyContent="flex-end"
+                container
+                justify="flex-end"
                 direction="column"
                 xs={7}
                 style={{
@@ -48,7 +49,7 @@ export default props => {
                 }}
               >
                 <div>
-                  <Typography color="primary" bold variant="h3">
+                  <Typography color="primary" variant="h3">
                     {info.title}
                   </Typography>
                   <Typography
